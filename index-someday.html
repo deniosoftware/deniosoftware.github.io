@@ -1,0 +1,154 @@
+<html>
+
+<head>
+    <title>Caleb Denio</title>
+
+    <link rel="shortcut icon" href="favicon.ico" />
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <style>
+        body {
+            padding-top: 85px;
+            margin: 0;
+            background-image: url("img/header-background.jpg");
+            background-attachment: fixed;
+            scroll-behavior: smooth;
+        }
+
+        h1 {
+            font-family: "Roboto", sans-serif;
+            margin: 0;
+            font-size: 50px;
+        }
+
+        #header {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+
+            box-shadow: 0px 0px 14px;
+            box-sizing: border-box;
+            padding: 10px;
+            width: 100%;
+
+            background-color: white;
+
+            z-index: 1;
+        }
+
+        #content1 {
+            background-color: rgba(0, 150, 255, 0.2);
+        }
+
+        .content {
+            color: white;
+            font-family: "Roboto", sans-serif;
+            height: 100%;
+            width: 100%;
+        }
+
+        .actual-content {
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            display: inline-block;
+        }
+
+        div#content1 div.actual-content {
+            left: 25%;
+            transform: translateY(-50%);
+            text-align: initial;
+        }
+
+        #social {
+            float: right;
+        }
+
+        #social i {
+            font-size: 40px;
+            color: rgb(100, 100, 100);
+            cursor: pointer;
+        }
+
+        #social i:hover {
+            color: black;
+        }
+
+        span.blue {
+            color: rgb(0, 150, 255);
+        }
+
+        nav {
+            float: right;
+            width: 33%;
+            text-align: center;
+        }
+
+        nav button.nav-button {
+            background-color: transparent;
+            color: rgb(150, 150, 150);
+            border: none;
+            outline: none;
+            cursor: pointer;
+
+            transition: 300ms all;
+
+            font-size: 20px;
+            font-family: "Roboto", sans-serif;
+        }
+
+        nav button.nav-button:hover {
+            color: black;
+        }
+
+        nav button.nav-button.active {
+            color: rgb(0, 150, 255);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <img src="img/logo.png" width="200px" />
+
+        <div id="social">
+            <a href="https://github.com/cjdenio/" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+        <nav>
+            <button class="nav-button active">Home</button>
+            <button class="nav-button">About</button>
+            <button class="nav-button">Projects</button>
+        </nav>
+    </div>
+    <div id="content1" class="content">
+        <div class="actual-content">
+            <h1>Hey!</h1>
+            <h2 style="font-weight:400">I'm Caleb Denio, a student <b><span class="blue">software developer</span></b>,
+                <b><span class="blue">audio engineer</span></b>, and
+                <b><span class="blue">production enthusiast</span></b>.</h2>
+        </div>
+    </div>
+    <div id="content2" class="content" style="height:50%;">
+        <div class="actual-content">
+            <h1>I write code that makes your production look <span class="blue">awesome</span>.</h1>
+        </div>
+    </div>
+    <div id="content3" class="content"
+        style="background-image: url('img/header-background-2.jpg');background-position: center bottom;background-attachment: fixed">
+        <div class="actual-content">
+            <h1>Content 3</h1>
+        </div>
+    </div>
+    <div style="height: 10%;background-color:rgb(50, 50, 50)" class="content">
+        <div class="actual-content">
+            Copyright &copy; 2019 Caleb Denio.
+        </div>
+    </div>
+</body>
+
+</html>
