@@ -1,0 +1,25 @@
+<head>
+    <title>Denio Software</title>
+    
+    <link rel="icon" href="/img/icon_512.png" />
+    
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<div id="header">
+    <a href="/"><img src="img/logo_black.png" width="300px" id="logo" /></a>
+
+    <nav>
+        {% for item in site.data.menu %}
+                {% if item.bold != true %}
+                <a href="{{ item.url }}"><button class="nav-button">{{ item.title }}</button></a>
+                {% else %}
+                <a href="{{ item.url }}"><button class="nav-button bold">{{ item.title }}</button></a>
+                {% endif %}
+        {% endfor %}
+    </nav>
+</div>
