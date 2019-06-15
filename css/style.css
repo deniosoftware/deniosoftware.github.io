@@ -55,6 +55,7 @@
             transform: translate(-50%, -50%);
             text-align: center;
             display: inline-block;
+            max-width: 100%;
         }
     
         #social {
@@ -150,4 +151,29 @@
             border: 3px solid rgb(255, 150, 0);
             border-radius: 50%;
             padding: 30px;
+
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+        }
+
+        .example{
+            display: inline-block;
+            background-color: rgb(240, 240, 240);
+            padding: 30px;
+            width: 350px;
+            height: 350px;
+
+            margin: 30px;
+        }
+
+        .example h2{
+            font-size: 30px;
+            text-transform: uppercase;
+            color: rgb(100, 100, 100);
+            letter-spacing: 3px;
+        }
+
+        .example p{
+            font-size: 20px;
         }
