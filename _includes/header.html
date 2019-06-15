@@ -1,5 +1,12 @@
+<!DOCTYPE html>
+
 <head>
-    <title>Denio Software</title>
+    {% if page.title %}
+    <title>{{ page.title }} | Denio Software</title>
+    {% else %}
+    <title>Denio Software | Custom Software Design</title>
+    {% endif %}
+
     
     <link rel="icon" href="/img/icon_512.png" />
     
@@ -10,16 +17,12 @@
     <link rel="stylesheet" href="/css/style.css" />
 </head>
 
-<div id="header">
+<div id="header" class="preload">
     <a href="/"><img src="img/logo_black.png" width="300px" id="logo" /></a>
 
     <nav>
         {% for item in site.data.menu %}
-                {% if item.bold != true %}
-                <a href="{{ item.url }}"><button class="nav-button">{{ item.title }}</button></a>
-                {% else %}
-                <a href="{{ item.url }}"><button class="nav-button bold">{{ item.title }}</button></a>
-                {% endif %}
+                <a href="{{ item.url }}"><button class="nav-button {% if item.bold == true %} bold {% endif %} {% if page.url == item.url %}active{% endif %}">{{ item.title }}</button></a>
         {% endfor %}
     </nav>
 </div>
