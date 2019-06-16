@@ -1,0 +1,32 @@
+[
+    {
+        "title": "Playbox",
+        "description": "An audio playback system for the live production industry.",
+        "icon": "/img/projects/playbox.png",
+        "url": "https://github.com/cjdenio/playbox"
+    },
+    {
+        "title": "CasparCG Template Marketplace",
+        "description": "A site for sharing templates made for popular open-source broadcast graphics system CasparCG.",
+        "icon": "/img/projects/casparcg.png",
+        "url": "https://cjdenio.github.io/casparcg-template-marketplace/"
+    },
+    {
+        "title": "Nerdy Meme Repo",
+        "description": "A GitHub repo with some nerdy memes that I made. Except there's only three. Maybe you'll add one?",
+        "icon": "/img/projects/icon_blue.png",
+        "url": "https://github.com/cjdenio/memes"
+    },
+    {
+        "title": "Fusion FRC 6763 Website",
+        "description": "I designed the website and logo for my robotics team, Fusion. (and I made that icon)",
+        "icon": "/img/projects/fusion.png",
+        "url": "https://fusion6763.org"
+    },
+    {
+        "title": "This website",
+        "description": "I designed this website from scratch with HTML, CSS, Jekyll, and a healthy amount of JavaScript.<br />That's right, I said <em>from scratch</em>.",
+        "icon": "/img/icon_512.png",
+        "url": "/"
+    }
+]
