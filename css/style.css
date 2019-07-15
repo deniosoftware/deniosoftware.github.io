@@ -176,3 +176,16 @@
         .example p{
             font-size: 20px;
         }
+
+        button:not(.nav-button){
+            background-color: rgb(255, 150, 0);
+            color: white;
+            font-size: 20px;
+            border: none;
+            cursor: pointer;
+            padding: 10px 20px;
+            font-weight: lighter;
+        }
+        button:not(.nav-button):hover{
+            background-color: rgb(225, 125, 0);
+        }

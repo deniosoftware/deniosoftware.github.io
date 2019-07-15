@@ -4,17 +4,21 @@ layout: page
 permalink: /projects
 ---
 <style>
-    td {
+    .td {
         text-align: left;
+        display: table-cell;
+        margin: 0;
+        vertical-align: middle;
         padding: 10px;
     }
 
-    tr {
+    .tr {
         transition: all 150ms;
         cursor: pointer;
+        display: table-row;
     }
 
-    tr:hover {
+    .tr:hover {
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     }
 
@@ -23,19 +27,22 @@ permalink: /projects
     }
 </style>
 
-<table style="margin: 0 auto">
+<div style="display:table;margin:0 auto">
     {% for project in site.data.projects %}
-    <tr onclick="window.location = '{{ project.url }}'">
-        <td>
+    <div class="tr" onclick="window.open('{{ project.url }}', 'Test')">
+        <div class="td">
             <img src="{{ project.icon }}" width="100px" />
-        </td>
-        <td>
+        </div>
+        <div class="td">
             <h2>{{ project.title }}</h2>
             <h3>{{ project.description }}</h3>
-        </td>
-    </tr>
+        </div>
+        <div class="td">
+            <button>Check it out <i class="fas fa-arrow-right"></i></button>
+        </div>
+    </div>
     {% endfor %}
-</table>
+</div>
 
 <h2>You can find some more projects on my <a href="https://github.com/cjdenio">GitHub page.</a></h2>
 <h2><a href="https://github.com/cjdenio/design">Graphic design projects are over here...</a></h2>
