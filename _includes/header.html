@@ -28,11 +28,15 @@
 </head>
 
 <div id="header" class="preload">
-    <a href="/"><img src="img/logo_black.png" width="300px" id="logo" /></a>
-
-    <nav>
-        {% for item in site.data.menu %}
-                <a href="{{ item.url }}"><button class="nav-button {% if item.bold == true %} bold {% endif %} {% if page.url == item.url %}active{% endif %}">{{ item.title }}</button></a>
-        {% endfor %}
-    </nav>
+    <div style="display:inline-flex;align-items: center;float: left;height: 100%;padding-left: 10px">
+        <a href="/"><img src="img/logo_black.png" width="300px" id="logo" /></a>
+    </div>
+    <div style="display: inline-flex;justify-content: center;align-items: center;float:right;height:100%">
+        <nav>
+            {% for item in site.data.menu %}
+            <a href="{{ item.url }}"><button
+                    class="nav-button {% if item.bold == true %} bold {% endif %} {% if page.url == item.url %}active{% endif %}">{{ item.title }}</button></a>
+            {% endfor %}
+        </nav>
+    </div>
 </div>

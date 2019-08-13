@@ -1,7 +1,7 @@
 ---
-title: Projects
+title: Products
 layout: page
-permalink: /projects
+permalink: /products
 ---
 <style>
     .td {
@@ -28,7 +28,7 @@ permalink: /projects
 </style>
 
 <div style="display:table;margin:0 auto">
-    {% for project in site.data.projects %}
+    {% for project in site.data.products %}
     <div class="tr" onclick="window.open('{{ project.url }}', 'Test')">
         <div class="td">
             <img src="{{ project.icon }}" width="100px" />
@@ -38,11 +38,11 @@ permalink: /projects
             <h3>{{ project.description }}</h3>
         </div>
         <div class="td">
-            <button>Check it out <i class="fas fa-arrow-right"></i></button>
+            <button class="bold" style="font-size: 20px"><i class="fas fa-arrow-right"></i></button>
         </div>
     </div>
     {% endfor %}
 </div>
 
-<h2>You can find some more projects on my <a href="https://github.com/cjdenio">GitHub page.</a></h2>
+<h2>Experimental projects can be found on our <a href="https://github.com/deniosoftware">GitHub page.</a></h2>
 <h2><a href="https://github.com/cjdenio/design">Graphic design projects are over here...</a></h2>
