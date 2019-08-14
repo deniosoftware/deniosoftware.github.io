@@ -19,8 +19,13 @@
         "url": "/blog"
     },
     {
-        "title": "Contact Us",
+        "title": "Contact",
         "url": "/contact",
+        "bold": true
+    },
+    {
+        "title": "Donate",
+        "url": "https://donorbox.org/denio-software",
         "bold": true
     }
 ]
