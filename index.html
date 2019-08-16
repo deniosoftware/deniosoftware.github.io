@@ -78,7 +78,6 @@
     }
 
     #cowsrock.hidden {
-        filter: blur(5px);
         opacity: 0;
     }
 
@@ -128,7 +127,7 @@
         </div>
         <p style="position:absolute;top:260px;margin-top: 70px;width:100%;font-size: 20px;font-weight:lighter" class="hidden" id="cowsrock">
             As technology advances, increasing numbers of businesses are moving toward
-            digital tools.</p>
+            digital tools. <span class="highlight">Let us help you be next.</span></p>
     </div>
 </div>
 <div id="content2" class="content" style="height:250px;background-color:rgb(240,240,240);color:black">
@@ -138,25 +137,16 @@
 </div>
 <div class="content" style="padding:30px 0;height:auto;background-color:white">
     <div>
-        <div style="display:inline-block"></div>
+        {% for example in site.data.examples %}
         <div class="example">
             <div style="position:relative">
-                <i class="icon fas fa-bed"></i>
-                <h2>Sleep</h2>
-                <p>I love sleeping. Don't you?</p>
+                <i class="icon fas fa-{{ example.icon }}"></i>
+                <h2>{{ example.title }}</h2>
+                <p>{{ example.description }}</p>
+                <button>Learn more <i class="fas fa-arrow-right"></i></button>
             </div>
         </div>
-        <div class="example">
-            <i class="icon fas fa-link"></i>
-            <h2>Integrations</h2>
-            <p>We'll integrate with apps like Slack, GitHub, MailChimp, and pretty much anything else you can dream up.
-            </p>
-        </div>
-        <div class="example">
-            <i class="icon fas fa-desktop"></i>
-            <h2>Web Design</h2>
-            <p>We'll design you the modern website of your dreams.</p>
-        </div>
+        {% endfor %}
     </div>
 </div>
 
