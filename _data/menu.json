@@ -7,16 +7,22 @@
     {
         "title": "About",
         "url": "/about",
-        "bold": false
+        "bold": false,
+        "submenu": [
+            {
+                "title": "What We Do",
+                "url": "/about/what-we-do"
+            },
+            {
+                "title": "Our Team",
+                "url": "/about/team"
+            }
+        ]
     },
     {
         "title": "Products",
         "url": "/products",
         "bold": false
-    },
-    {
-        "title": "Blog",
-        "url": "/blog"
     },
     {
         "title": "Contact",

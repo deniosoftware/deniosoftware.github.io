@@ -2,16 +2,19 @@
     {
         "title": "Custom Software",
         "icon": "code",
-        "description": "We'll provide you with software to <h>help run your business</h>."
+        "description": "We'll provide you with software to <h>help run your business</h>.",
+        "url": "custom-software"
     },
     {
         "title": "Integrations",
         "icon": "link",
-        "description": "We'll integrate with apps you already use, like <h>Slack</h>, <h>Trello</h>, <h>Mailchimp</h>, and anything else."
+        "description": "We'll integrate with apps you already use, like <h>Slack</h>, <h>Trello</h>, <h>Mailchimp</h>, and anything else.",
+        "url": "integrations"
     },
     {
         "title": "Web Design",
         "icon": "desktop",
-        "description": "We'll design you a <h>modern</h> website that will leave your customers in awe."
+        "description": "We'll design you a <h>modern</h> website that will leave your customers in awe.",
+        "url": "web-design"
     }
 ]

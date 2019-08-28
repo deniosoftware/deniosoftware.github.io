@@ -9,12 +9,9 @@
         transition: all 1000ms;
 
         display: inline-block;
-    }
 
-    #content1.notLoaded #welcome {
-        opacity: 0;
-        transform: translateY(30px);
-        filter: blur(5px);
+        animation: 1000ms ease 500ms welcome;
+        animation-fill-mode: both;
     }
 
     #content1 {
@@ -24,10 +21,6 @@
         position: relative;
 
         /*perspective: 2px;*/
-    }
-
-    #content1.notLoaded::after{
-        filter: none;
     }
 
     #content1::after {
@@ -52,11 +45,11 @@
         transition: filter 1000ms;
     }
 
-    #content1.notLoaded::before{
+    #content1.notLoaded::before {
         opacity: 0;
     }
 
-    #content1::before{
+    #content1::before {
         content: "";
         height: 200px;
         width: 200px;
@@ -77,25 +70,53 @@
         transition: opacity 1000ms;
     }
 
-    #cowsrock.hidden {
-        opacity: 0;
-    }
-
     #cowsrock {
-        transition: all 1000ms;
-        filter: none;
-        opacity: 1;
+        animation: 1000ms 1000ms cowsrock both;
     }
 
-    @keyframes hexagon{
-        0%{
+    @keyframes cowsrock {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes welcome {
+        0% {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        100% {
+            opacity: 1;
             transform: none;
         }
-        50%{
+    }
+
+    @keyframes hexagon {
+        0% {
+            transform: none;
+        }
+
+        50% {
             transform: translateY(-40px) scale(1.1);
         }
-        0%{
+
+        0% {
             transform: none;
+        }
+    }
+
+    @media screen and (max-width: 1100px) {
+        #content1 {
+            height: calc(100vw * 0.5625);
+        }
+
+        #welcome h1 {
+            font-size: 4vw;
         }
     }
 
@@ -123,9 +144,10 @@
         <div id="welcome" style="background-color: rgba(0, 0, 0, 0.5);padding:30px;position:relative">
             <h1 class="underline" style="text-transform: uppercase">The world is changing</h1>
             <h2 style="font-weight:400">Is your business keeping up?</h2>
-            <button class="bold">Learn more <i class="fas fa-arrow-right"></i></button>
+            <a href="/about/what-we-do"><button class="bold">Learn more <i class="fas fa-arrow-right"></i></button></a>
         </div>
-        <p style="position:absolute;top:260px;margin-top: 70px;width:100%;font-size: 20px;font-weight:lighter" class="hidden" id="cowsrock">
+        <p style="position:absolute;top:260px;margin-top: 70px;width:100%;font-size: 20px;font-weight:lighter"
+            id="cowsrock">
             As technology advances, increasing numbers of businesses are moving toward
             digital tools. <span class="highlight">Let us help you be next.</span></p>
     </div>
@@ -138,26 +160,29 @@
 <div class="content" style="padding:30px 0;height:auto;background-color:white">
     <div>
         {% for example in site.data.examples %}
-        <div class="example">
-            <div style="position:relative">
-                <i class="icon fas fa-{{ example.icon }}"></i>
-                <h2>{{ example.title }}</h2>
-                <p>{{ example.description }}</p>
-                <button>Learn more <i class="fas fa-arrow-right"></i></button>
+            <div class="example" onclick="window.location = '/about/what-we-do#{{ example.url }}'">
+                <div style="position:relative">
+                    <i class="icon fas fa-{{ example.icon }}"></i>
+                    <h2>{{ example.title }}</h2>
+                    <p>{{ example.description }}</p>
+                    <button>Learn more <i class="fas fa-arrow-right"></i></button>
+                </div>
             </div>
-        </div>
         {% endfor %}
     </div>
 </div>
 
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        setTimeout(function () {
-            document.getElementById("content1").classList.remove("notLoaded");
-        }, 800)
-        setTimeout(function () {
-            document.getElementById("cowsrock").classList.remove("hidden");
-        }, 1300);
+    document.getElementById("header").classList.add("transparent");
+    document.body.style.paddingTop = 0;
+
+    $(document).scroll(function (eventObject) {
+        if ($(document).scrollTop() > 100) {
+            document.getElementById("header").classList.remove("transparent");
+        }
+        else {
+            document.getElementById("header").classList.add("transparent");
+        }
     })
 </script>
 
