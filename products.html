@@ -1,47 +1,98 @@
----
-title: Products
-layout: page
-permalink: /products
----
-<style>
-    .td {
-        text-align: left;
-        display: table-cell;
-        margin: 0;
-        vertical-align: middle;
-        padding: 10px;
-    }
+<!DOCTYPE html>
+<html>
 
-    .tr {
-        transition: all 150ms;
-        cursor: pointer;
-        display: table-row;
-    }
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Denio Software</title>
+    <link rel="icon" type="image/png" sizes="1080x1080" href="/assets/img/icon.png">
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="/assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="/assets/css/Brands.css">
+    <link rel="stylesheet" href="/assets/css/Contact-Form-Clean-1.css">
+    <link rel="stylesheet" href="/assets/css/Contact-Form-Clean.css">
+    <link rel="stylesheet" href="/assets/css/Features-Boxed-1.css">
+    <link rel="stylesheet" href="/assets/css/Features-Boxed.css">
+    <link rel="stylesheet" href="/assets/css/Features-Clean.css">
+    <link rel="stylesheet" href="/assets/css/Footer-Basic.css">
+    <link rel="stylesheet" href="/assets/css/Footer-Clean.css">
+    <link rel="stylesheet" href="/assets/css/Highlight-Clean.css">
+    <link rel="stylesheet" href="/assets/css/Highlight-Phone.css">
+    <link rel="stylesheet" href="/assets/css/Navigation-Clean.css">
+    <link rel="stylesheet" href="/assets/css/Navigation-with-Button.css">
+    <link rel="stylesheet" href="/assets/css/Navigation-with-Search.css">
+    <link rel="stylesheet" href="/assets/css/Projects-Horizontal.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
 
-    .tr:hover {
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    }
-
-    h3 {
-        color: rgb(150, 150, 150);
-    }
-</style>
-
-<div style="display:table;margin:0 auto">
-    {% for project in site.data.products %}
-    <div class="tr" onclick="window.open('{{ project.url }}', 'Test')">
-        <div class="td">
-            <img src="{{ project.icon }}" width="100px" />
-        </div>
-        <div class="td">
-            <h2>{{ project.title }}</h2>
-            <h3>{{ project.description }}</h3>
-        </div>
-        <div class="td">
-            <button class="bold" style="font-size: 20px"><i class="fas fa-arrow-right"></i></button>
+<body>
+    <div>
+        <nav class="navbar navbar-light navbar-expand-md shadow navigation-clean fixed-top">
+            <div class="container"><a class="navbar-brand" href="/"><img src="/assets/img/logo-black.png" width="300px"></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                <div
+                    class="collapse navbar-collapse" id="navcol-1">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">About</a>
+                            <div class="dropdown-menu shadow-lg" role="menu"><a class="dropdown-item" role="presentation" href="/whatwedo.html">What We Do</a><a class="dropdown-item" role="presentation" href="ourteam.html">Our Team</a><a class="dropdown-item" role="presentation" href="whatweuse.html">What We Use</a></div>
+                        </li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="/products.html">Products</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="https://donorbox.org/denio-software" target="_blank">Donate</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link btn" id="contactus" href="/contact.html" style="/*background-color: rgba(0,0,0,0);*//*color: #ff9600;*//*border: 2px solid rgb(255, 150, 0);*//*border-radius: 5px;*/">Contact Us</a></li>
+                    </ul>
+            </div>
+    </div>
+    </nav>
+    </div>
+    <div class="projects-horizontal">
+        <div class="container">
+            <div class="intro">
+                <h2 class="text-center">Products</h2>
+                <p class="text-center">Experimental stuff can be found on our <a href="https://github.com/deniosoftware">GitHub</a> page.</p>
+            </div>
+            <div class="row projects">
+                <div class="col-sm-6 item">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-5 d-flex align-items-center"><a href="https://github.com/cjdenio/playbox/releases" target="_blank"><img class="img-fluid" src="/assets/img/playbox.png"></a></div>
+                        <div class="col d-flex align-items-center">
+                            <div>
+                                <h3 class="name">Playbox</h3>
+                                <p class="description">An audio playback system for the live production industry</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 item">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-5 d-flex align-items-center"><a href="https://calebdenio.me/casparcg-template-marketplace" target="_blank"><img class="img-fluid" src="/assets/img/casparcg.png"></a></div>
+                        <div class="col d-flex align-items-center">
+                            <div>
+                                <h3 class="name">CasparCG Template Marketplace</h3>
+                                <p class="description">A site for sharing templates made for popular open-source broadcast graphics system CasparCG<br></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    {% endfor %}
-</div>
+    <div class="footer-basic">
+        <footer>
+            <div class="social"><a href="https://github.com/deniosoftware"><i class="fab fa-github"></i></a><a href="#"><i class="fab fa-facebook"></i></a><a href="#"><i class="fab fa-linkedin"></i></a></div>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="/index.html">Home</a></li>
+                <li class="list-inline-item"><a href="/whatwedo.html">Services</a></li>
+                <li class="list-inline-item"><a href="#">Software License</a></li>
+                <li class="list-inline-item"><a href="#">Contract</a></li>
+            </ul>
+            <p class="copyright">Denio Software © 2019</p>
+        </footer>
+    </div>
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/assets/js/bs-animation.js"></script>
+    <script src="/assets/js/modal.js"></script>
+</body>
 
-<h2>Experimental projects can be found on our <a href="https://github.com/deniosoftware">GitHub page.</a></h2>
+</html>

@@ -1,0 +1,57 @@
+body {
+  padding-top: 130.7px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+}
+
+* {
+  font-family: "Roboto";
+}
+
+.nav-item {
+  font-weight: lighter;
+}
+
+.btn {
+  text-transform: none !important;
+  color: rgb(255, 150, 0) !important;
+  background-color: transparent !important;
+  border: 2px solid rgb(255, 150, 0) !important;
+  border-radius: 5px;
+  /*padding: 10px 15px !important;*/
+  font-weight: lighter !important;
+}
+
+.btn:hover {
+  background-color: rgb(255, 150, 0) !important;
+  color: white !important;
+}
+
+.features-boxed .item .icon {
+  color: rgb(255, 150, 0);
+}
+
+.btn.white {
+  border-color: white !important;
+  color: white !important;
+}
+
+.btn.white:hover {
+  border-color: rgb(255, 150, 0) !important;
+}
+
+.features-boxed .box:hover {
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+  transform: translateY(-5px);
+}
+
+input[type="text"]:invalid {
+  /*box-shadow: 0px 0px 0px 2px red;*/
+}
+
+.bold {
+  font-weight: bold;
+  color: rgb(255, 150, 0);
+}
+
