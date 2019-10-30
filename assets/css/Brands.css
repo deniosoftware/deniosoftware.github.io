@@ -26,3 +26,9 @@
   border-radius: 10px;
 }
 
+ul.example li {
+  font-family: Raleway Black, sans-serif;
+  text-transform: uppercase;
+  color: rgb(130, 160, 160);
+}
+
