@@ -53,5 +53,14 @@ input[type="text"]:invalid {
 .bold {
   font-weight: bold;
   color: rgb(255, 150, 0);
+  font-family: Raleway;
+}
+
+.stuff-row img {
+  margin: 10px;
+}
+
+#stuff-container .stuff-row {
+  flex-wrap: wrap;
 }
 

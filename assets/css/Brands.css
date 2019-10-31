@@ -32,3 +32,8 @@ ul.example li {
   color: rgb(130, 160, 160);
 }
 
+.stuff-row > * {
+  /*margin: 0 10px;*/
+  /*width: 75px;*/
+}
+
